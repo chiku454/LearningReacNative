@@ -1,32 +1,36 @@
  import React, {Component} from 'react';
  import { View, Text, Image } from 'react-native';
-
- export default class Header extends Component {
-    render() {
-        let pic = {
-            uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
-          };
+//  export default class Header extends Component {
+//    constructor(props){
+//      super(props);
+//    }
+//     render() {
+//         let pic = {
+//             uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+//           };
+const Header =(props) =>{
       return (
         <View style={styles.viewStyle}>
           <Text style={styles.textStyle}>
-            ALBUMS
+            {props.headerText}
           </Text>
         </View>
       );
     }
-  }
+
+ 
  const styles ={
     viewStyle:{
-        flex:1,
-        justifyContent: 'flex-start',
+        backgroundColor:'#F8F8F8',  
+        justifyContent: 'center',
         alignItems: 'center',
-        position:'relative',
-        top:10
+        height:60,
+        shadowColor:'#FFFFFF',
+        shadowOffset:{width:0,heigth:2},
+        shadowOpacity:0.9,
     },
     textStyle:{
-        fontSize:30,
-        backgroundColor:'#F8F8F8',
-       
+        fontSize:20,
     },
- 
  };
+export default Header;

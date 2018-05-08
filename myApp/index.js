@@ -5,16 +5,20 @@
 import React from 'react';
 import { Text, AppRegistry, View, StyleSheet} from 'react-native'; 
 import Header from './src/components/header'
+import AlbumsList from './src/components/albumsList'
 
 const App = () => 
    (
        <View style={styles.container}>
-            <Header /> 
+            <Header headerText='ALBUMS'/> 
+            <AlbumsList/>
          </View>
     );
-    const styles = StyleSheet.create({
+    const styles ={
         container: {    
-          // backgroundColor: '#F5FCFF',
+          backgroundColor: 'white',
+          flex:1
+          // color: '#333333',
         },
         // welcome: {
         //   fontSize: 20,
@@ -23,9 +27,9 @@ const App = () =>
         // },
         // instructions: {
         //   textAlign: 'center',
-        //   color: '#333333',
+        //  
         //   marginBottom: 5,
         // },
-      });
+      }
       
   AppRegistry.registerComponent('myApp', () => App);
